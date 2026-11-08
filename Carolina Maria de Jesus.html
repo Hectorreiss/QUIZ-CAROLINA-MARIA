@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carolina Maria de Jesus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#e3d3ac;--ink:#3a2a1c;--muted:#5f4c39;--rule:#a58a60;--sheet:rgba(250,243,222,.55);--hl:rgba(196,140,40,.38);
+  --stain:rgba(120,80,30,.16);--edge:rgba(80,50,15,.38);
+  --cA:#7a2e1f;--cB:#2f5d4a;--cC:#6b3a63;--cD:#8a5a14;
+  --tex:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .38  0 0 0 0 .26  0 0 0 0 .1  0.6 0 0 0 -.12'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#251c14;--ink:#eadcbc;--muted:#b9a584;--rule:#6b5640;--sheet:rgba(60,45,30,.6);--hl:rgba(200,150,70,.3);
+    --stain:rgba(200,150,70,.07);--edge:rgba(0,0,0,.55);
+    --cA:#e39a86;--cB:#86c7a8;--cC:#d3a4cc;--cD:#e6bb6c;
+    --tex:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .8  0 0 0 0 .65  0 0 0 0 .4  0.4 0 0 0 -.1'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#251c14;--ink:#eadcbc;--muted:#b9a584;--rule:#6b5640;--sheet:rgba(60,45,30,.6);--hl:rgba(200,150,70,.3);
+  --stain:rgba(200,150,70,.07);--edge:rgba(0,0,0,.55);
+  --cA:#e39a86;--cB:#86c7a8;--cC:#d3a4cc;--cD:#e6bb6c;
+  --tex:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .8  0 0 0 0 .65  0 0 0 0 .4  0.4 0 0 0 -.1'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);background-color:var(--paper);
+  background-image:radial-gradient(ellipse at 12% 18%,var(--stain),transparent 38%),radial-gradient(ellipse at 88% 62%,var(--stain),transparent 42%),radial-gradient(ellipse at 40% 96%,var(--stain),transparent 36%),radial-gradient(ellipse at center,transparent 50%,var(--edge) 110%),var(--tex);
+  font:18px/1.7 "Old Standard TT",Georgia,"Times New Roman",serif}
+.wrap{max-width:720px;margin:0 auto;padding:56px 22px 72px}
+[hidden]{display:none!important}
+header{border-bottom:5px double var(--rule);padding-bottom:22px;margin-bottom:34px}
+h1{font-size:clamp(2.3rem,8vw,4.2rem);line-height:1.05;margin:0;font-weight:700}
+h2{font-size:clamp(1.5rem,5vw,2rem);line-height:1.2;margin:0 0 .6rem}
+.sub{margin:.6rem 0 0;font-style:italic;color:var(--muted);font-size:1.15rem}
+p{margin:0 0 1em}
+h1:focus,h2:focus,p:focus{outline:none}
+.btn{display:inline-block;margin-top:.6rem;font:inherit;font-weight:700;font-size:1.1rem;cursor:pointer;
+  color:var(--paper);background:var(--ink);border:3px double var(--paper);outline:2px solid var(--ink);padding:.7em 1.7em;transition:transform .12s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:transparent}
+.btn:focus-visible,.opt:focus-visible,.linkbtn:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.row{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin-top:1.4rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);margin-bottom:8px}
+.linkbtn{font:inherit;background:none;border:0;color:var(--ink);text-decoration:underline;cursor:pointer;padding:4px 0}
+.prog{height:8px;background:var(--rule);opacity:.8;margin-bottom:1.8rem}
+.prog i{display:block;height:100%;background:var(--ink);transition:width .3s}
+.opts{display:grid;gap:12px;margin-top:1.4rem}
+.opt{display:grid;grid-template-columns:2.2rem 1fr;gap:12px;align-items:start;text-align:left;font:inherit;color:var(--ink);
+  background:var(--sheet);border:2px solid var(--rule);padding:13px 16px;cursor:pointer;transition:transform .12s}
+.opt:hover{border-color:var(--ink);transform:translateX(3px)}
+.opt .bd{width:2rem;height:2rem;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.opt.sel{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opt.sel .bd{border-color:var(--paper)}
+.stamp{font-size:clamp(2.2rem,9vw,3.8rem);animation:stamp .6s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes stamp{from{transform:scale(1.5) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
+.title{font-size:clamp(2.1rem,8vw,3.4rem);font-weight:700;line-height:1.15;margin:.2rem 0;display:inline;background:linear-gradient(transparent 58%,var(--hl) 58%)}
+.rcard{background:var(--sheet);border:1px solid var(--rule);border-top:8px solid var(--c);padding:22px;margin-top:1.4rem}
+.why{border-left:4px solid var(--c);padding-left:14px;margin:0}
+.small{font-size:.92rem;color:var(--muted)}
+.srow{display:grid;grid-template-columns:minmax(0,11rem) 1fr 2rem;gap:10px;align-items:center;font-size:.95rem;margin-top:10px}
+.bar{height:12px;background:var(--rule);opacity:.9}.bar span{display:block;height:100%}
+.srow b{text-align:right}
+@media (max-width:600px){.wrap{padding:36px 16px 56px}.srow{grid-template-columns:1fr 2rem}.srow .bar{grid-column:1/-1;order:3}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<section class="screen" id="s-intro">
+  <header>
+    <h1 tabindex="-1" data-focus>Carolina Maria de Jesus</h1>
+    <p class="sub">Escritora brasileira, 1914–1977</p>
+  </header>
+  <h2>Escrever para resistir</h2>
+  <p>Carolina Maria de Jesus nasceu em Sacramento, Minas Gerais, em 1914. Mudou-se para São Paulo e morou na favela do Canindé, onde sustentava os filhos catando papel e escrevia nas horas livres, em cadernos que recolhia durante o trabalho.</p>
+  <p>Em 1960, o diário <em>Quarto de Despejo</em> levou a sua voz a leitores do Brasil e do mundo. Ela morreu em 1977, deixando uma obra que segue sendo lida, estudada e redescoberta.</p>
+  <p class="small">Descubra qual livro dela combina com você: são 8 perguntas.</p>
+  <button class="btn" id="start">Começar quiz</button>
+</section>
+
+<section class="screen" id="s-quiz" hidden>
+  <div class="top"><span id="qcount"></span><button class="linkbtn" id="back">Voltar</button></div>
+  <div class="prog" aria-hidden="true"><i id="pbar"></i></div>
+  <h2 id="qtext" tabindex="-1" data-focus></h2>
+  <div class="opts" id="opts"></div>
+</section>
+
+<section class="screen" id="s-reveal" hidden>
+  <h2 class="stamp" tabindex="-1" data-focus>Seu resultado chegou!</h2>
+  <p>Você respondeu às 8 perguntas. Hora de descobrir qual livro combina com você.</p>
+  <button class="btn" id="open">Abrir resultado</button>
+</section>
+
+<section class="screen" id="s-result" hidden>
+  <p id="r-intro" tabindex="-1" data-focus>O livro de Carolina Maria de Jesus que mais combina com você é:</p>
+  <div><h2 class="title" id="r-title"></h2></div>
+  <div class="rcard" id="r-card">
+    <p class="small" id="r-sub" style="margin-bottom:.5em"></p>
+    <p id="r-desc"></p>
+    <p class="why" id="r-why"></p>
+  </div>
+  <h2 style="margin-top:2.2rem">Suas respostas</h2>
+  <div id="r-score"></div>
+  <div class="row">
+    <button class="btn" id="redo">Refazer o quiz</button>
+    <button class="btn ghost" id="share">Compartilhar resultado</button>
+    <button class="linkbtn" id="home">Voltar ao início</button>
+  </div>
+</section>
+
+</main>
+<script>
+var L=["A","B","C","D"];
+var BOOKS={
+ A:{t:"Quarto de Despejo",s:"Diário de uma favelada, 1960",c:"--cA",
+  d:"A obra apresenta registros do cotidiano de Carolina Maria de Jesus e sua experiência vivendo na favela do Canindé, em São Paulo, abordando pobreza, dificuldades e desigualdade social. É escrita em primeira pessoa, com franqueza e olhar atento.",
+  w:"Você valoriza a realidade sem enfeites, a sinceridade e a persistência de quem segue em frente mesmo quando tudo é difícil."},
+ B:{t:"Casa de Alvenaria",s:"Diário de uma ex-favelada, 1961",c:"--cB",
+  d:"A obra registra uma nova fase da vida de Carolina Maria de Jesus após o reconhecimento de seu trabalho literário e sua mudança para uma casa de alvenaria. É um diário sobre mudanças, expectativas e os desafios dessa nova realidade.",
+  w:"Você acredita em recomeços, busca novas oportunidades e gosta de histórias sobre transformação e superação."},
+ C:{t:"Diário de Bitita",s:"Memórias, publicado após a morte da autora",c:"--cC",
+  d:"A obra reúne memórias da infância e da juventude de Carolina em Sacramento, Minas Gerais. Ela olha para o passado e conta como foi crescer ali, falando de família, de trabalho, de identidade e das desigualdades que já marcavam aquele tempo.",
+  w:"Você acredita que a nossa história faz parte de quem somos e se encanta com memórias, infância e origens."},
+ D:{t:"Pedaços da Fome",s:"Romance, 1963",c:"--cD",
+  d:"Romance publicado em 1963, no qual Carolina Maria de Jesus leva para a ficção a fome e as desigualdades que conhecia de perto. É um livro para quem quer ver a escritora transformando observação social em narrativa.",
+  w:"Você é sensível às injustiças, observa os problemas da sociedade e gosta de leituras que fazem pensar."}
+};
+var Q=[
+ ["Como você costuma lidar com momentos difíceis?",["Enfrento a situação e tento seguir em frente.","Procuro mudanças e novas oportunidades.","Tento entender o que aconteceu e aprender com isso.","Penso em como aquela situação afeta outras pessoas."]],
+ ["Qual dessas características mais combina com você?",["Persistente.","Sonhador(a).","Curioso(a).","Sensível às injustiças."]],
+ ["Qual assunto mais desperta seu interesse?",["Histórias reais do cotidiano.","Mudanças na vida e novas experiências.","Memórias, infância e identidade.","Desigualdade e problemas sociais."]],
+ ["Se você pudesse escrever um livro sobre sua vida, o que gostaria de mostrar?",["As dificuldades que enfrentou e como conseguiu continuar.","As mudanças e conquistas que viveu.","Suas lembranças de infância e de onde veio.","Os problemas da sociedade que você observa."]],
+ ["O que mais valoriza em uma história?",["A realidade e a sinceridade.","A transformação e a superação.","As lembranças e experiências pessoais.","A crítica aos problemas sociais."]],
+ ["Qual dessas frases mais representa sua maneira de enxergar a vida?",["“Mesmo quando é difícil, é preciso continuar.”","“Sempre podemos buscar uma vida diferente.”","“Nossa história faz parte de quem somos.”","“É importante perceber os problemas que existem ao nosso redor.”"]],
+ ["Qual tipo de leitura você escolheria primeiro?",["Um diário baseado em experiências reais.","Um relato sobre mudanças e novas etapas da vida.","Uma história sobre memórias e infância.","Uma narrativa que aborda problemas sociais."]],
+ ["O que você gostaria que uma leitura fizesse você sentir?",["Que eu estou conhecendo uma realidade verdadeira.","Que mudanças podem acontecer na vida.","Que minhas memórias e minha história têm importância.","Que devo refletir sobre a sociedade e suas desigualdades."]]
+];
+var $=function(s){return document.querySelector(s)};
+var i=0,ans=[],lock=false,winner="A";
+function show(id){
+  document.querySelectorAll(".screen").forEach(function(e){e.hidden=e.id!==id});
+  window.scrollTo(0,0);
+  var f=document.querySelector("#"+id+" [data-focus]");
+  if(f){f.focus({preventScroll:true})}
+}
+function renderQ(){
+  $("#qcount").textContent="Pergunta "+(i+1)+" de "+Q.length;
+  $("#pbar").style.width=(i/Q.length*100)+"%";
+  $("#qtext").textContent=Q[i][0];
+  $("#back").style.visibility=i>0?"visible":"hidden";
+  var h="";
+  Q[i][1].forEach(function(t,n){
+    h+='<button class="opt'+(ans[i]===n?' sel':'')+'" data-n="'+n+'" aria-pressed="'+(ans[i]===n)+'"><span class="bd">'+L[n]+'</span><span>'+t+'</span></button>';
+  });
+  $("#opts").innerHTML=h;
+  show("s-quiz");
+}
+function pick(n){
+  if(lock)return;
+  lock=true;ans[i]=n;
+  document.querySelectorAll(".opt").forEach(function(b){b.classList.toggle("sel",+b.dataset.n===n)});
+  setTimeout(function(){
+    lock=false;
+    if(i<Q.length-1){i++;renderQ()}else{show("s-reveal")}
+  },320);
+}
+function calc(){
+  var c={A:0,B:0,C:0,D:0};
+  ans.forEach(function(n){c[L[n]]++});
+  var max=Math.max(c.A,c.B,c.C,c.D);
+  var tied=L.filter(function(l){return c[l]===max});
+  if(tied.length===1)return {w:tied[0],c:c};
+  for(var k=ans.length-1;k>=0;k--){
+    if(tied.indexOf(L[ans[k]])>-1)return {w:L[ans[k]],c:c};
+  }
+  return {w:tied[0],c:c};
+}
+function result(){
+  var r=calc(),b=BOOKS[r.w];winner=r.w;
+  $("#r-card").style.setProperty("--c","var("+b.c+")");
+  $("#r-title").textContent=b.t;
+  $("#r-sub").textContent=b.s;
+  $("#r-desc").textContent=b.d;
+  $("#r-why").innerHTML="<strong>Por que combina com você:</strong> "+b.w;
+  var s="";
+  L.forEach(function(l){
+    var n=r.c[l];
+    s+='<div class="srow"><span>'+BOOKS[l].t+'</span><div class="bar"><span style="width:'+(n/Q.length*100)+'%;background:var('+BOOKS[l].c+')"></span></div><b>'+n+'</b></div>';
+  });
+  $("#r-score").innerHTML=s;
+  show("s-result");
+}
+function restart(){i=0;ans=[];renderQ()}
+$("#start").onclick=restart;
+$("#redo").onclick=restart;
+$("#home").onclick=function(){show("s-intro")};
+$("#back").onclick=function(){if(i>0&&!lock){i--;renderQ()}};
+$("#opts").onclick=function(e){var b=e.target.closest(".opt");if(b)pick(+b.dataset.n)};
+$("#open").onclick=result;
+$("#share").onclick=function(){
+  var btn=$("#share"),text="O livro de Carolina Maria de Jesus que mais combina comigo é "+BOOKS[winner].t+"! Faça o quiz também.";
+  function copied(){btn.textContent="Copiado!";setTimeout(function(){btn.textContent="Compartilhar resultado"},2000)}
+  try{if(navigator.share){navigator.share({title:document.title,text:text,url:location.href}).catch(function(){});return}}catch(e){}
+  try{navigator.clipboard.writeText(text+" "+location.href).then(copied,function(){})}catch(e){}
+};
+</script>
+</body>
+</html>
